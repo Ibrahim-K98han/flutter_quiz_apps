@@ -19,11 +19,15 @@ class ResultPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text('Correct Answers'),
-            Text('$rightAnswers', style: TextStyle(fontSize: 30),),
+            Image.asset('images/winner.png'),
+            const Text('Correct Answers',style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
+            Text('$rightAnswers', style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
             TextButton(
                 onPressed: () => Navigator.pushReplacementNamed(context, QuestionPage.routeName),
-                child: Text('Go Back')
+                child: ElevatedButton(
+                  onPressed: (){},
+                    child: Text('Go Back')
+                )
             )
           ],
         ),

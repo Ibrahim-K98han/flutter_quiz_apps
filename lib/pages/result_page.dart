@@ -6,6 +6,7 @@ import '../temp_db.dart';
 class ResultPage extends StatelessWidget {
   static const String routeName = '/result';
   int rightAnswers = 0;
+  int wrongAnswers = 0;
   ResultPage({Key? key}) : super(key: key);
 
   @override
@@ -19,7 +20,7 @@ class ResultPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.asset('images/winner.png'),
+            Image.asset('images/winner.png',height: 200,width: 200,fit: BoxFit.cover,),
             const Text('Correct Answers',style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
             Text('$rightAnswers', style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
             TextButton(
